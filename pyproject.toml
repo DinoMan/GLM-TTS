@@ -34,6 +34,8 @@ dependencies = [
     "pronouncing",
     "peft",
     "x-transformers",
+    "torchcodec",
+    "openai-whisper",
 ]
 
 [project.optional-dependencies]
