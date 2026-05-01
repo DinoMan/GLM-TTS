@@ -630,7 +630,7 @@ class TTSFrontEnd:
         if isinstance(speech, str):
             speech = load_wav(speech, 16000)
 
-        if torch.npu.is_available():
+        if hasattr(torch, 'npu') and torch.npu.is_available():
             speech = speech.detach().to("cpu", dtype=torch.float32).contiguous()
 
         feat = kaldi.fbank(speech,
