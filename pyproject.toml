@@ -30,6 +30,9 @@ dependencies = [
     "pydub",
     "regex",
     "librosa",
+    "emoji",
+    "pronouncing",
+    "peft",
 ]
 
 [project.optional-dependencies]
