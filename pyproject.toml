@@ -33,6 +33,7 @@ dependencies = [
     "emoji",
     "pronouncing",
     "peft",
+    "x-transformers",
 ]
 
 [project.optional-dependencies]
