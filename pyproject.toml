@@ -1,0 +1,52 @@
+[project]
+name = "glmtts"
+version = "0.1.0"
+description = "GLM-TTS: Controllable & Emotion-Expressive Zero-shot TTS with Multi-Reward RL"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = [
+    "torch",
+    "torchaudio",
+    "numpy",
+    "scipy",
+    "soundfile",
+    "tqdm",
+    "transformers",
+    "safetensors",
+    "einops",
+    "HyperPyYAML",
+    "pyyaml",
+    "huggingface_hub",
+    "onnxruntime",
+    "jieba",
+    "pypinyin",
+    "inflect",
+    "WeTextProcessing",
+    "zhconv",
+    "zhon",
+    "contractions",
+    "sentencepiece",
+    "tiktoken",
+    "pydub",
+    "regex",
+]
+
+[project.optional-dependencies]
+gpu = [
+    "onnxruntime-gpu",
+]
+rl = [
+    "deepspeed",
+    "wandb",
+    "peft",
+]
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["cosyvoice*", "flow*", "frontend*", "llm*", "utils*", "grpo*"]
+
+[tool.setuptools.package-data]
+frontend = ["*.onnx", "*.pt"]
